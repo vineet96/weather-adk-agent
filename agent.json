@@ -1,0 +1,41 @@
+{
+  "spec_version": "1.0",
+  "name": "Weather ADK Agent",
+  "id": "weather_adk_agent",
+  "description": "ADK Agent providing current weather, forecasts, and A2UI native component outputs over the A2A protocol.",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Google Agent Development Kit Community",
+    "url": "https://adk.dev"
+  },
+  "protocols": [
+    {
+      "name": "A2A",
+      "version": "1.0",
+      "endpoint": "/a2a/v1/message"
+    },
+    {
+      "name": "A2UI",
+      "version": "1.0",
+      "spec_url": "https://a2ui.org"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "get_current_weather",
+      "description": "Retrieves real-time weather metrics including temperature, humidity, wind, and AQI."
+    },
+    {
+      "name": "get_weather_forecast",
+      "description": "Retrieves multi-day weather forecasts with daily highs, lows, and precipitation risks."
+    }
+  ],
+  "a2ui_catalog": [
+    "Card",
+    "MetricGrid",
+    "MetricBadge",
+    "ForecastList",
+    "ForecastRow",
+    "DisplayTemp"
+  ]
+}
