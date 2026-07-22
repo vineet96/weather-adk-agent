@@ -14,7 +14,7 @@ import argparse
 import subprocess
 
 def deploy_agent_engine(
-    agent_dir: str = "weather_agent",
+    agent_dir: str = ".",
     project: str = None,
     region: str = None,
     api_key: str = None,
@@ -34,6 +34,7 @@ def deploy_agent_engine(
         agent_dir,
         "--display_name", display_name,
         "--description", description,
+        "--adk_app", "agent_engine_app",
         "--adk_app_object", "root_agent"
     ]
 
