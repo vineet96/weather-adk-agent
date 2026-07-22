@@ -34,7 +34,7 @@ def deploy_agent_engine(
         agent_dir,
         "--display_name", display_name,
         "--description", description,
-        "--adk_app", "agent_engine_app.py",
+        "--adk_app", "agent_engine_app",
         "--adk_app_object", "root_agent"
     ]
 
