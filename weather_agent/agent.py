@@ -70,7 +70,7 @@ Be concise, accurate, and always include the ```a2ui JSON payload for weather qu
 """
 
 root_agent = Agent(
-    model='gemini-2.5-flash',
+    model='gemini-1.5-flash',
     name='weather_adk_agent',
     description='A Weather Agent with A2UI protocol support and A2A interoperability.',
     instruction=WEATHER_AGENT_INSTRUCTION,
