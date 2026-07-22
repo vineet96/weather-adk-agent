@@ -7,13 +7,22 @@ invoke weather tools, and generate declarative A2UI component payloads.
 
 import json
 from google.adk.agents.llm_agent import Agent
-from weather_agent.tools import get_current_weather, get_weather_forecast
-from weather_agent.a2ui import (
-    create_a2ui_weather_card,
-    create_a2ui_metric_grid,
-    create_a2ui_forecast_list,
-    wrap_a2ui_payload
-)
+try:
+    from weather_agent.tools import get_current_weather, get_weather_forecast
+    from weather_agent.a2ui import (
+        create_a2ui_weather_card,
+        create_a2ui_metric_grid,
+        create_a2ui_forecast_list,
+        wrap_a2ui_payload
+    )
+except ImportError:
+    from tools import get_current_weather, get_weather_forecast
+    from a2ui import (
+        create_a2ui_weather_card,
+        create_a2ui_metric_grid,
+        create_a2ui_forecast_list,
+        wrap_a2ui_payload
+    )
 
 WEATHER_AGENT_INSTRUCTION = """
 You are a Weather AI Assistant built on Google Agent Development Kit (ADK) with A2UI (Agent-to-User Interface) and A2A (Agent-to-Agent) support.

@@ -9,7 +9,10 @@ Implements standard A2A endpoints:
 import json
 from typing import Dict, Any, Optional
 from fastapi import APIRouter, HTTPException, Request
-from weather_agent.agent import root_agent
+try:
+    from weather_agent.agent import root_agent
+except ImportError:
+    from agent import root_agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 
