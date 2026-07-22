@@ -17,16 +17,16 @@ if _current_dir not in sys.path:
 from google.adk.agents.llm_agent import Agent
 
 try:
-    from weather_agent.tools import get_current_weather, get_weather_forecast
-    from weather_agent.a2ui import (
+    from tools import get_current_weather, get_weather_forecast
+    from a2ui import (
         create_a2ui_weather_card,
         create_a2ui_metric_grid,
         create_a2ui_forecast_list,
         wrap_a2ui_payload
     )
 except ImportError:
-    from tools import get_current_weather, get_weather_forecast
-    from a2ui import (
+    from weather_agent.tools import get_current_weather, get_weather_forecast
+    from weather_agent.a2ui import (
         create_a2ui_weather_card,
         create_a2ui_metric_grid,
         create_a2ui_forecast_list,
